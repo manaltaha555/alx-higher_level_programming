@@ -8,11 +8,15 @@ def list_division(my_list_1, my_list_2, list_length):
         except TypeError:
             print("wrong type")
             a = 0
+            continue
         except ZeroDivisionError:
             print("division by 0")
             a = 0
+            continue
         except IndexError:
             print("out of range")
+            a = 0
+            continue
         finally:
             new.append(a)
     return new
