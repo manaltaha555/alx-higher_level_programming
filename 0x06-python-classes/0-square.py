@@ -1,3 +1,4 @@
 #!/usr/bin/python3
+"""square module"""
 class Square:
-    """Represent a m square module"""
+    """Represent a  square module"""
