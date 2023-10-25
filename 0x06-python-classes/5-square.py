@@ -48,6 +48,7 @@ class Square:
         """prints in stdout the square with the char #"""
         if self.__size == 0:
             print()
+            return
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end="\n" if j is self.__size - 1 and i != j else "")
