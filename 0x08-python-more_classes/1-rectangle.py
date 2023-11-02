@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-""" Define properities and behaviours of the rectangle"""
+"""Module for rectangle properties."""
 
 
-class Regtangle:
-    """Representation of a rectangle """
+class Rectangle:
+    """Representation of a rectangle."""
+
     def __init__(self, width=0, height=0):
-        """initialize the rectangle """
+        """Initialize the rectangle."""
         self.height = height
         self.width = width
 
     @property
     def width(self):
-        """retrieve the width of the rectangle """
+        """Retrieve the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setting the width the width """
+        """Set the width the width."""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -25,12 +26,12 @@ class Regtangle:
 
     @property
     def height(self):
-        """Rterieve the height """
+        """Reterieve the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ setting the height"""
+        """Set the height."""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
