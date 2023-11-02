@@ -5,10 +5,13 @@
 class Rectangle:
     """Representation of a rectangle."""
 
+    n = 1
+
     def __init__(self, width=0, height=0):
         """Initialize the rectangle."""
         self.height = height
         self.width = width
+        n += 1
 
     @property
     def width(self):
@@ -59,3 +62,8 @@ class Rectangle:
     def __repr__(self):
         """Return representation of the Rectangle."""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Delete the rectangle."""
+        print("Bye rectangle...")
+        n -= 1
