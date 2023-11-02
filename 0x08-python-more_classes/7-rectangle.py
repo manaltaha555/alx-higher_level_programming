@@ -6,6 +6,7 @@ class Rectangle:
     """Representation of a rectangle."""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize the rectangle."""
@@ -54,10 +55,9 @@ class Rectangle:
     def __str__(self):
         """Return the rectangle shape."""
         if self.__height == 0 or self.__width == 0:
-            string = ""
+            return ""
         else:
-            string = "\n".join("#" * self.__width for i in range(self.__height))
-        return string
+            return ((str(Rectangle.print_symbol) * self.__width + "\n") * self.__height)[:-1]
 
     def __repr__(self):
         """Return representation of the Rectangle."""
