@@ -27,10 +27,6 @@ class Student:
 
     def reload_from_json(self, json):
         """Replace all attributes of the student instance."""
-        for key, value in json:
-            if key == "first_name":
-                self.first_name = value
-            elif key == "last_name":
-                self.last_name = value
-            elif key == "age":
-                self.age = age
+        for key, value in json.items():
+            if key in self.__dict__:
+                self.__dict__[key] = value
